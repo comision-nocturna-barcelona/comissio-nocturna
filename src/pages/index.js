@@ -33,6 +33,9 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </div>
+          <footer>
+            <a href="mailto:nocturna@nocturna.algo">nocturna@nocturna.algo</a>
+          </footer>
         </Layout>
       </>
     )
