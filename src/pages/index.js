@@ -4,30 +4,31 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
+import styles from './index.module.css'
 import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const [author] = get(this, 'props.data.allContentfulPerson.edges')
+    const manifesto = get(this, 'props.data.contentfulManifesto')
 
     return (
       <Layout location={this.props.location} >
-        <div style={{ background: '#fff' }}>
+        <div style={{ background: '#000' }}>
           <Helmet title={siteTitle} />
-          <Hero data={author.node} />
+          <div className={styles.hero}>
+            comissiò nocturna
+          </div>
           <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
+            <div className="article-list">
+              {manifesto.body.content.map((node, index) => {
                 return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
+                  <p key={`000${index}`}>
+                    {node.content[0].value}
+                  </p>
                 )
               })}
-            </ul>
+            </div>
           </div>
         </div>
       </Layout>
@@ -44,46 +45,20 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
-      edges {
-        node {
-          title
-          slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-             ...GatsbyContentfulFluid_tracedSVG
-            }
+    contentfulManifesto {
+      title
+      body {
+        content {
+          content {
+            value
+            nodeType
           }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
+          nodeType
         }
+        body
       }
-    }
-    allContentfulPerson(filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }) {
-      edges {
-        node {
-          name
-          shortBio {
-            shortBio
-          }
-          title
-          heroImage: image {
-            fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-        }
-      }
+      id
+      createdAt(fromNow: true, locale: "ca")
     }
   }
 `
