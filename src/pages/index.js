@@ -34,7 +34,7 @@ class RootIndex extends React.Component {
             </div>
           </div>
           <footer>
-            <a href="mailto:nocturna@nocturna.algo">nocturna@nocturna.algo</a>
+            <a href="mailto:ola@comissionocturna.org">ola@comissionocturna.org</a>
           </footer>
         </Layout>
       </>
