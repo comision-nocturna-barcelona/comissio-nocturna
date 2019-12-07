@@ -1,0 +1,12 @@
+; comissionocturna.org
+$TTL 3600
+comissionocturna.org. IN     SOA    a.root-servers.net. arturmiglio@gmail.com. (
+				2019120701  ; Serial
+				3H          ; refresh after 3 hours
+				1H          ; retry after 1 hour
+				1W          ; expire after 1 week
+				1D)         ; minimum TTL of 1 day
+
+comissionocturna.org. IN    TXT     yandex-verification: 018a81b20569a72f
+
+; EOF
