@@ -1,11 +1,29 @@
+@keyframes fade-in-to-85 {
+    0% { opacity: 0; }
+    20% { opacity: 0; }
+    100% { opacity: 0.85 }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    20% { opacity: 0; }
+    100% { opacity: 1 }
+}
+
+@keyframes fade-in-slow {
+    0% { opacity: 0; }
+    80% { opacity: 0; }
+    100% { opacity: 1 }
+}
+
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 61.8vh;
   max-height: 768px;
-  background: #000000;
-  color: #ffffff;
+  background: #010101;
+  color: #afafaf;
   font-size: 2em;
   overflow: hidden;
   object-fit: contain;
@@ -13,19 +31,29 @@
 }
 
 .hero img {
-  max-width: 290px;
+    max-width: 290px;
+    opacity: 0.85;
+    transition: opacity 450ms ease-out;
+    animation: fade-in-to-85 3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.hero img:hover {
+    opacity: 1;
 }
 
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
+  color: #afafaf;
   margin-bottom: 4rem;
+  opacity: 1;
+  animation: fade-in-slow 6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 footer a {
-  color: #ffffff;
+  color: #afafaf;
+  transition: color 450ms ease-out;
 }
 
 footer a:hover {

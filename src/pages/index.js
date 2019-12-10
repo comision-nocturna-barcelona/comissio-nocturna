@@ -20,7 +20,10 @@ class RootIndex extends React.Component {
         </h1>
         <Layout location={this.props.location} >
           <div style={{ background: '#000' }}>
-            <Helmet title={siteTitle} />
+            <Helmet>
+                <title>{siteTitle}</title>
+                <meta name="google-site-verification" content="nLSiADgZQC59qpHAAAbZGixuOy1LKu87ThI0s5f7zAk" /> // eslint-disable-line
+            </Helmet>
             <div className="wrapper">
               <div className="article-list">
                 {manifesto.body.content.map((node, index) => {
