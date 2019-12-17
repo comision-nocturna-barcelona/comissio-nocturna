@@ -2,7 +2,6 @@
   "build": {
     "env": {
       "CONTENTFUL_ACCESS_TOKEN": "@contentful-access-token",
-      "CONTENTFUL_HOST": "@contentful-host",
       "CONTENTFUL_SPACE_ID": "@contentful-space-id"
     }
   }
