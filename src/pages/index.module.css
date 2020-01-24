@@ -20,8 +20,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 61.8vh;
-  max-height: 768px;
+  height: 56vh;
+  max-height: 600px;
   background: #010101;
   color: #afafaf;
   font-size: 2em;
@@ -45,6 +45,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: column;
   color: #afafaf;
   margin-bottom: 4rem;
   opacity: 1;

@@ -49,30 +49,113 @@ a {
   color: currentColor;
 }
 
+.bold {
+  font-weight: 500;
+}
+
 .wrapper {
   width: calc(100% - 10vmin);
   margin: 0 auto;
-  padding: 5vmin 0;
+  padding: 0 0 5vmin;
+}
+
+.fontsize-2 {
+  font-size: 1.5rem;
 }
 
 /**
  * article grid
  */
-.article-list {
-  margin: 0;
-  padding: 0;
+.article-paragraphs {
   list-style: none;
+}
+.article-paragraphs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   grid-gap: 5vmin;
 }
 
-.article-list p {
+.article-paragraphs {
+  font-size: 1.35em;
+  color: #c5c5c5;
+}
+
+.article-paragraphs > * {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 37.5rem;
+}
+
+.article-paragraphs .heading-2 {
+  margin-top: 6rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.article-paragraphs .heading-1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.article-intro {
     color: #c5c5c5;
     opacity: 1;
     animation: fade-in-slow 4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+/**
+ * MARGINS
+*/
+
+.margin-0 {
+ margin-top: 0rem;
+ margin-bottom: 0rem;
+}
+
+.margin-0-important {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.margin-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.margin-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.margin-3 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.margin-4 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.margin-5 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.margin-6 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.margin-7 {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+
+.margin-8 {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
 
 /**
  *
@@ -94,4 +177,19 @@ a {
 
 .list-inline li {
   display: inline-block;
+}
+
+#section-intro {
+  margin-bottom: 20vh;
+  display: block;
+  color: #a0a0a0;
+  opacity: 1;
+  animation: fade-in-slow 4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#section-body {
+  margin-bottom: 30vh;
+  display: block;
+  opacity: 1;
+  animation: fade-in-slow 4s cubic-bezier(0.19, 1, 0.22, 1);
 }
