@@ -56,7 +56,11 @@ class RootIndex extends React.Component {
         <Layout location={this.props.location} >
           <div style={{ background: '#000' }}>
             <Helmet>
-                <title>{siteTitle}</title>
+                <title>comissió nocturna</title>
+                <meta property="og:title" content="comissió nocturna" />
+                <meta property="og:image" content="https://comissionocturna.org/public/cono-splash.png" />
+                <meta property="og:type" content="organisation" />
+                <meta property="og:description " content="Volem que Barcelona tingui una Comissió Nocturna. Un ent independent i sense ànim de lucre dedicat a assegurar que les nits de Barcelona siguin cultura: Volem apostar per la qualitat, sostenibilitat, seguretat i inclusivitat." />
             </Helmet>
             <div className="wrapper">
               <section id="section-intro">
