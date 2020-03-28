@@ -6,7 +6,7 @@ export default () => (
   <nav role="navigation">
     <ul className={styles.navigation}>
       <li className={styles.navigationItem}>
-        <Link to="/cat">cat</Link>
+        <Link to="/">cat</Link>
       </li>
       <li className={styles.navigationItem}>
         <Link to="/en">en</Link>
