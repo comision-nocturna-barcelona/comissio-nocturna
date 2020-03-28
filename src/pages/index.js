@@ -92,7 +92,7 @@ export const pageQuery = graphql`
       title
     }
   }
-  allContentfulManifesto(filter: { node_locale: { eq: "en-GB" } }) {
+  allContentfulManifesto(filter: { node_locale: { eq: "ca" } }) {
     edges {
       node {
         id
@@ -103,7 +103,7 @@ export const pageQuery = graphql`
         body {
           json
         }
-        createdAt(fromNow: true, locale: "en-GB")
+        createdAt(fromNow: true, locale: "ca")
         node_locale
       }
     }

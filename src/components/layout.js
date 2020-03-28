@@ -15,9 +15,12 @@ class Template extends React.Component {
     }
 
     return (
-      <Container>
-        {children}
-      </Container>
+      <>
+        <Navigation />
+        <Container>
+          {children}
+        </Container>
+      </>
     )
   }
 }
