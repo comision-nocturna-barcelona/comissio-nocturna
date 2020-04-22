@@ -6,8 +6,7 @@ comissionocturna.org. IN     SOA    a.root-servers.net. arturmiglio@gmail.com. (
 				1H          ; retry after 1 hour
 				1W          ; expire after 1 week
 				1D)         ; minimum TTL of 1 day
-
-comissionocturna.org. IN    TXT     yandex-verification: 018a81b20569a72f
-comissionocturna.org. IN    TXT     zoho-verification=zb15759734.zmverify.zoho.eu
+				
+selector._domainkey.comissionocturna.org IN     TXT    v=DKIM1;k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwHb8zhgNARKDKvk1EWUzXk4Pac8tr8YsezHBGMwxb+e4sPd+UARrUc2vnMBCgOKzN3KbxkBi83mg1n7F+sf0sa5r7lVNAcd1qryCqtnNgYt9aHmqQyT5N2GxHMjln0yS+ocd3HfhI3/NN7OQz9VK5+m6T2QIpFaib7VJHAwFaPwIDAQAB
 
 ; EOF
