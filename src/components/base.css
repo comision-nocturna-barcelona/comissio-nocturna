@@ -1,34 +1,52 @@
 @font-face {
-  font-family: "Avenir";
+  font-family: 'Avenir';
   font-weight: 400;
   font-style: normal;
-  src: url("/avenir-400.woff2") format("woff2");
+  src: url('/avenir-400.woff2') format('woff2');
   font-display: swap;
 }
 
 @keyframes fade-in-to-85 {
-    0% { opacity: 0; }
-    20% { opacity: 0; }
-    100% { opacity: 0.85 }
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.85;
+  }
 }
 
 @keyframes fade-in {
-    0% { opacity: 0; }
-    20% { opacity: 0; }
-    100% { opacity: 1 }
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fade-in-slow {
-    0% { opacity: 0; }
-    50% { opacity: 0; }
-    100% { opacity: 1 }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 body {
-  font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
+  font-family: 'Avenir', Tahoma, Arial, Helvetica, sans-serif;
   font-size: 1em;
   line-height: 1.65;
-  color: #373F49;
+  color: #373f49;
   background: #000;
   margin: 0;
   font-weight: 100;
@@ -82,9 +100,9 @@ a {
 }
 
 .article-paragraphs > * {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 37.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 37.5rem;
 }
 
 .article-paragraphs .heading-2 {
@@ -99,9 +117,9 @@ a {
 }
 
 .article-intro {
-    color: #c5c5c5;
-    opacity: 1;
-    animation: fade-in-slow 4s cubic-bezier(0.19, 1, 0.22, 1);
+  color: #c5c5c5;
+  opacity: 1;
+  animation: fade-in-slow 4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 /**
@@ -109,8 +127,8 @@ a {
 */
 
 .margin-0 {
- margin-top: 0rem;
- margin-bottom: 0rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 }
 
 .margin-0-important {
@@ -162,9 +180,9 @@ a {
  *
  */
 .section-headline {
-  padding: 0 0 0.4em 0;
+  padding: 0 0 1.5em 0;
   margin: 0 0 5vmin 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgb(30, 30, 30);
 }
 
 /**
@@ -189,8 +207,12 @@ a {
 }
 
 #section-body {
-  margin-bottom: 30vh;
   display: block;
   opacity: 1;
   animation: fade-in-slow 4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#container {
+  opacity: 1;
+  animation: fade-in-slow 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
