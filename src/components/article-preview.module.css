@@ -27,6 +27,11 @@
 .preview:hover .previewImage {
   opacity: 0.7;
 }
+@media only screen and (max-width: 600px) {
+  .previewImage {
+    opacity: 0.7;
+  }
+}
 
 .preview .gatsby-image-wrapper {
   position: absolute;
@@ -67,9 +72,10 @@
   color: rgba(255, 255, 255, 1);
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 600px) {
   .previewTitle {
     font-size: 1.25em;
+    color: white;
   }
 }
 
