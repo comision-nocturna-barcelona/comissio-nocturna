@@ -212,7 +212,7 @@ a {
 
 @media only screen and (max-width: 600px) {
   #container {
-    padding: 0 5vmin;
+    padding: 2vh 5vmin 0;
   }
 }
 

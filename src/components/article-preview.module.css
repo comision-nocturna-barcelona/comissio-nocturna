@@ -67,6 +67,12 @@
   color: rgba(255, 255, 255, 1);
 }
 
+@media only screen and (max-width: 580px) {
+  .previewTitle {
+    font-size: 1.25em;
+  }
+}
+
 .preview section p {
   display: block;
   position: absolute;

@@ -45,6 +45,14 @@ footer {
   padding-left: 14rem;
   padding-right: 5vmin;
   margin: 20vh auto 4rem auto;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    margin: 20vh auto;
+    padding: 10vmin;
+  }
 }
 
 footer a {
