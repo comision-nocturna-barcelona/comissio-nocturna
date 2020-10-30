@@ -1,5 +1,5 @@
 import React from 'react'
-import { BLOCKS, MARKS } from '@contentful/rich-text-types'
+import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types'
 
 const Bold = ({ children }) => <span className="bold">{children}</span>
 const Text = ({ children, margin = '2', fontsize = '0' }) => (
@@ -20,6 +20,7 @@ const Heading2 = ({ children, level = '2', margin = '4' }) => (
 const renderOptions = {
   renderMark: {
     [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+    [MARKS.CODE]: html => <div dangerouslySetInnerHTML={{ __html: html }} className={`html-element-wrapper`}></div>,
   },
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
@@ -34,6 +35,11 @@ const renderOptions = {
     [BLOCKS.QUOTE]: (node, children) => <blockquote className={`margin-4`}>{children}</blockquote>,
     [BLOCKS.HEADING_1]: (node, children) => <Heading1>{children}</Heading1>,
     [BLOCKS.HEADING_2]: (node, children) => <Heading2>{children}</Heading2>,
+    [INLINES.HYPERLINK]: (node, children) => (
+      <a href={node.data.uri} target="_blank">
+        {children}
+      </a>
+    ),
   },
 }
 

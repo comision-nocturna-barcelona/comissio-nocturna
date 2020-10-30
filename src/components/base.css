@@ -1,3 +1,21 @@
+@media only screen and (max-width: 580px) {
+  html {
+    font-size: 25%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 100%;
+  }
+}
+
 @font-face {
   font-family: 'Avenir';
   font-weight: 400;
@@ -73,7 +91,7 @@ a {
 }
 
 .wrapper {
-  width: calc(100% - 10vmin);
+  /* width: calc(100% - 10vmin); */
   margin: 0 auto;
   padding: 0 0 5vmin;
 }
@@ -179,6 +197,23 @@ a {
 /**
  *
  */
+#container {
+  max-width: 1024px;
+  margin: 20vh auto;
+  padding: 0 5vmin 0 14em;
+  opacity: 1;
+  animation: fade-in-slow 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media only screen and (max-width: 600px) {
+  #container {
+    padding: 0 5vmin;
+  }
+}
+
+/**
+ *
+ */
 .section-headline {
   padding: 0 0 1.5em 0;
   margin: 0 0 5vmin 0;
@@ -198,6 +233,9 @@ a {
   display: inline-block;
 }
 
+/**
+ *
+ */
 #section-intro {
   margin-bottom: 20vh;
   display: block;
@@ -212,7 +250,7 @@ a {
   animation: fade-in-slow 4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-#container {
-  opacity: 1;
-  animation: fade-in-slow 2s cubic-bezier(0.19, 1, 0.22, 1);
+.html-element-wrapper iframe {
+  width: 100%;
+  max-width: 100%;
 }

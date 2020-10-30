@@ -7,6 +7,9 @@ import Layout from '../components/layout'
 
 import heroStyles from '../components/hero.module.css'
 
+import renderOptions from '../components/renderOptions'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
@@ -16,26 +19,33 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location}>
         <div style={{ color: '#fff' }}>
           <Helmet title={`${post.title} | ${siteTitle}`} />
-          <div className={heroStyles.hero}>
-            {post.heroImage && <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} />}
+          <div className={heroStyles.hero} style={{ gridTemplateColumns: `${post.heroImage ? '1fr 1fr' : '1fr'}` }}>
+            {post.heroImage && (
+              <Img
+                className={heroStyles.heroImage}
+                alt={post.title}
+                fluid={post.heroImage.fluid}
+                objectFit="contain"
+                style={{}}
+              />
+            )}
+            <div>
+              <h1 className="section-headline">{post.title}</h1>
+              <p
+                style={{
+                  display: 'block',
+                  color: 'rgba(255, 255, 255, 0.75)',
+                  marginBottom: '4rem',
+                }}
+              >
+                ⏰ {post.publishDate}
+              </p>
+            </div>
           </div>
           <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
-            <p
-              style={{
-                display: 'block',
-                color: 'rgba(255, 255, 255, 0.75)',
-                marginBottom: '4rem',
-              }}
-            >
-              ⏰ {post.publishDate}
-            </p>
-            <div
-              style={{ fontSize: '18px', lineHeight: 2 }}
-              dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html,
-              }}
-            />
+            <div style={{ fontSize: '18px', lineHeight: 2 }}>
+              {documentToReactComponents(post.body.json, renderOptions)}
+            </div>
           </div>
         </div>
       </Layout>
@@ -61,8 +71,8 @@ export const pageQuery = graphql`
         }
       }
       body {
-        childMarkdownRemark {
-          html
+        ... on contentfulBlogPostBodyRichTextNode {
+          json
         }
       }
     }

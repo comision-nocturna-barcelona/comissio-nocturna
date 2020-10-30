@@ -4,12 +4,10 @@ import Navigation from './navigation'
 import base from './base.css'
 import styles from './layout.module.css'
 import conoLogo from '../../static/cono.svg'
-import conoLogoTagline from '../../static/cono-tagline.svg'
 
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
-    let header
 
     let rootPath = `/`
     if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
@@ -19,14 +17,14 @@ class Template extends React.Component {
     return (
       <>
         <Navigation />
-        <h1 className={styles.hero}>
-          <img src={conoLogoTagline} alt="Comissiò Nocturna" />
-        </h1>
         <Container>{children}</Container>
         <footer>
           <div>
-            <img style={{ width: '150px', margin: '4rem auto' }} src={conoLogo} alt="comissiò nocturna" />
+            <img style={{ width: '9.3rem', margin: '4rem auto 1rem' }} src={conoLogo} alt="comissiò nocturna" />
           </div>
+          <p style={{ fontSize: '2rem', fontWeight: '100', marginBottom: '5rem' }}>
+            Perquè la nit és cultura. Carpe Noctem.
+          </p>
           <div style={{ display: 'flex', width: '20rem', justifyContent: 'space-between', marginBottom: '2rem' }}>
             <a href="https://instagram.com/comissio.nocturna" target="_blank">
               INSTAGRAM

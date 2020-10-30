@@ -14,6 +14,5 @@ export default ({ article }) => (
         <Link to={`/blog/${article.slug}`}>{article.title}</Link>
       </h3>
     </section>
-    {/* <small>{article.publishDate}</small> */}
   </article>
 )

@@ -28,7 +28,7 @@ class RootIndex extends React.Component {
               background: '#000',
               display: 'grid',
               gridTemplateColumns: '1fr 1fr',
-              gap: '4rem',
+              gap: '2rem',
               marginBottom: '10rem',
             }}
           >
@@ -56,11 +56,6 @@ export const pageQuery = graphql`
         node {
           id
           title
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
           heroImage {
             fluid(maxWidth: 448) {
               ...GatsbyContentfulFluid_tracedSVG

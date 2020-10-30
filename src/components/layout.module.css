@@ -34,30 +34,6 @@
   }
 }
 
-.hero {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  overflow: hidden;
-  object-fit: contain;
-  object-position: left;
-  position: fixed;
-  top: 5vmin;
-  left: 5vmin;
-  margin: 0;
-}
-
-.hero img {
-  max-width: 145px;
-  opacity: 1;
-  transition: opacity 450ms ease-out;
-  animation: fade-in 2500ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.hero img:hover {
-  opacity: 1;
-}
-
 footer {
   display: flex;
   justify-content: center;
