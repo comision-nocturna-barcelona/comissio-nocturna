@@ -21,13 +21,7 @@ class BlogPostTemplate extends React.Component {
           <Helmet title={`${post.title} | ${siteTitle}`} />
           <div className={heroStyles.hero} style={{ gridTemplateColumns: `${post.heroImage ? '1fr 1fr' : '1fr'}` }}>
             {post.heroImage && (
-              <Img
-                className={heroStyles.heroImage}
-                alt={post.title}
-                fluid={post.heroImage.fluid}
-                objectFit="contain"
-                style={{}}
-              />
+              <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} objectFit="contain" />
             )}
             <div>
               <h1 className="section-headline">{post.title}</h1>
