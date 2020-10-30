@@ -6,14 +6,14 @@ import conoLogoTagline from '../../static/cono-tagline.svg'
 export default () => (
   <nav role="navigation">
     <ul className={styles.navigation}>
-      <Link to="/">
-        <h1 className={styles.hero}>
+      <h1 className={styles.hero}>
+        <Link to="/">
           <img src={conoLogoTagline} alt="Comissiò Nocturna" />
-        </h1>
-      </Link>
+        </Link>
+      </h1>
       <li className={styles.navigationItem}>
         <Link activeClassName={styles.navigationItemActive} to="/">
-          <span>articles</span>
+          blog
         </Link>
       </li>
       <li className={styles.navigationItem}>

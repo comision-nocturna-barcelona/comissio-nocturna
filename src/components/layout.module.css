@@ -40,9 +40,11 @@ footer {
   align-items: center;
   flex-flow: column;
   color: #afafaf;
-  margin-bottom: 4rem;
   opacity: 1;
   animation: fade-in-slow 2500ms cubic-bezier(0.19, 1, 0.22, 1);
+  padding-left: 14rem;
+  padding-right: 5vmin;
+  margin: 20vh auto 4rem auto;
 }
 
 footer a {

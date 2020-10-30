@@ -13,7 +13,7 @@ function RootIndex({ data, location }) {
   const ca = get(data, 'manifestoCA.edges[0].node')
   const en = get(data, 'manifestoEN.edges[0].node')
 
-  const [currLang, setCurrLang] = useState('ca')
+  const [currLang, setCurrLang] = useState('en')
   const manifesto = {
     ca,
     en,
@@ -29,7 +29,7 @@ function RootIndex({ data, location }) {
           <meta property="og:type" content="organisation" />
           <meta
             property="og:description "
-            content="Volem que Barcelona tingui una Comissió Nocturna. Un ent independent i sense ànim de lucre dedicat a assegurar que les nits de Barcelona siguin cultura: Volem apostar per la qualitat, sostenibilitat, seguretat i inclusivitat."
+            content="We want Barcelona to have a Night Comission. An independent non-profit organization which aims to ensure that Barcelona nightlife continues to be considered part of the city cultural expressions and interests."
           />
         </Helmet>
         <div className={styles.languageSelector}>

@@ -86,6 +86,11 @@ a {
   color: currentColor;
 }
 
+*:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.4);
+  outline-offset: 0.5rem;
+}
+
 .bold {
   font-weight: 400;
 }
@@ -200,7 +205,7 @@ a {
 #container {
   max-width: 1024px;
   margin: 20vh auto;
-  padding: 0 5vmin 0 14em;
+  padding: 0 5vmin 0 14rem;
   opacity: 1;
   animation: fade-in-slow 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
