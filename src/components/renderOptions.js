@@ -20,6 +20,7 @@ const Heading2 = ({ children, level = '2', margin = '4' }) => (
 const renderOptions = {
   renderMark: {
     [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+    // this 👇🏻 allows us to embed iframes and more (html code gets rendered from code block)
     [MARKS.CODE]: html => <div dangerouslySetInnerHTML={{ __html: html }} className={`html-element-wrapper`}></div>,
   },
   renderNode: {
