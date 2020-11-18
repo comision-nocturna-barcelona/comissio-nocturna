@@ -21,3 +21,7 @@ Run a production build into `./public` and publish the site to GitHub pages.
 ### `yarn run cleanup-repository`
 
 Removes all dependencies, scripts and data from the installation script.
+
+## For editing content head to:
+
+https://app.contentful.com/spaces/kcnuvbnl0yoj/home
