@@ -32,7 +32,7 @@ const renderOptions = {
         <Text margin="1">{children}</Text>
       </li>
     ),
-    [BLOCKS.HR]: (node, children) => <hr className={`margin-6`}>{children}</hr>,
+    [BLOCKS.HR]: (node, children) => <hr className={`margin-6`} />,
     [BLOCKS.QUOTE]: (node, children) => <blockquote className={`margin-4`}>{children}</blockquote>,
     [BLOCKS.HEADING_1]: (node, children) => <Heading1>{children}</Heading1>,
     [BLOCKS.HEADING_2]: (node, children) => <Heading2>{children}</Heading2>,
