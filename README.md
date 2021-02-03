@@ -1,6 +1,6 @@
 # comissio-nocturna
 
-Created using Gatsby [Contentful](https://www.contentful.com) starter for creating a blog
+Created using Gatsby [Contentful](https://www.contentful.com) starter for creating a blog.
 
 ## Commands
 
