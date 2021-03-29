@@ -1,5 +1,7 @@
 name: Lighthouse CI
-on: push
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
@@ -9,12 +11,11 @@ jobs:
         uses: treosh/lighthouse-ci-action@v7
         with:
           urls: |
-            https://comissio-nocturna-git-$GITHUB_BASE_REF.comision-nocturna-barcelona.vercel.app/
-            https://comissio-nocturna-git-$GITHUB_BASE_REF.comision-nocturna-barcelona.vercel.app/blog
-            https://comissio-nocturna-git-$GITHUB_BASE_REF.comision-nocturna-barcelona.vercel.app/manifesto
+            https://comissio-nocturna-git-$BRANCH.comision-nocturna-barcelona.vercel.app/
+            https://comissio-nocturna-git-$BRANCH.comision-nocturna-barcelona.vercel.app/blog
+            https://comissio-nocturna-git-$BRANCH.comision-nocturna-barcelona.vercel.app/manifesto
           budgetPath: ./budget.json # test performance budgets
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
         env:
-          GITHUB_BASE_REF: ${{ github.base_ref }}
-        if: (github.base_ref != 0) || (github.base_ref != NaN)
+          BRANCH: ${{ github.head_ref }}
