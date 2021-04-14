@@ -22,3 +22,8 @@ Run a production build into `./public` and publish the site to GitHub pages.
 
 Removes all dependencies, scripts and data from the installation script.
 
+## Content
+
+### For editing content head to:
+
+https://app.contentful.com/spaces/kcnuvbnl0yoj/home
