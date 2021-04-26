@@ -18,7 +18,13 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div style={{ color: '#fff' }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
+          <Helmet>
+            <html lang="ca" />
+            <title>{`${post.title} | ${siteTitle}`}</title>
+            <meta property="og:title" content={`${post.title} | ${siteTitle}`} />
+            <meta property="og:image" content="https://comissionocturna.org/cono-splash.png" />
+            <meta property="og:type" content="article" />
+          </Helmet>
           <div className={heroStyles.hero} style={{ gridTemplateColumns: `${post.heroImage ? '1fr 1fr' : '1fr'}` }}>
             {post.heroImage && (
               <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} objectFit="contain" />
@@ -62,6 +68,7 @@ export const pageQuery = graphql`
       heroImage {
         fluid(maxWidth: 1180, background: "rgb:000000") {
           ...GatsbyContentfulFluid_tracedSVG
+          base64
         }
       }
       body {

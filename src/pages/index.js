@@ -13,7 +13,12 @@ class RootIndex extends React.Component {
     return (
       <>
         <Helmet>
+          <html lang="ca" />
           <title>{siteTitle}</title>
+          <meta
+            name="description"
+            content="Volem que Barcelona tingui una Comissió Nocturna. Un ent independent i sense ànim de lucre dedicat a assegurar que les nits de Barcelona siguin cultura: Volem apostar per la qualitat, sostenibilitat, seguretat i inclusivitat."
+          />
           <meta property="og:title" content={siteTitle} />
           <meta property="og:image" content="https://comissionocturna.org/cono-splash.png" />
           <meta property="og:type" content="organisation" />
