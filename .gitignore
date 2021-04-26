@@ -70,3 +70,5 @@ public
 
 # mac os
 .DS_Store
+
+.vercel
