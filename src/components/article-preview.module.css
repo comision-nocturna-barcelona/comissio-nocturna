@@ -3,6 +3,19 @@
   text-align: center;
 }
 
+.previewLink:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.previewLink:nth-child(4) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.previewLink:nth-child(12) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
 .previewCircle {
   background-color: white;
   border-radius: 50%;
@@ -17,7 +30,6 @@
 }
 
 .previewImage {
-  background-color: white;
   border-radius: 50%;
   width: 100%;
   overflow: hidden;
@@ -60,11 +72,11 @@
   text-align: center;
   transform: translate3d(-50%, -50%, 0);
   margin: 0;
-  font-size: 1.75em;
+  font-size: 1.6em;
   line-height: 1.3;
   font-weight: 100;
   text-decoration: none;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: rgba(127, 127, 127, 1);
   transition: 250ms color ease;
 }

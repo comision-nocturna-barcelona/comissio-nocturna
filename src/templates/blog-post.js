@@ -3,12 +3,12 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
-import Layout from '../components/layout'
-
-import heroStyles from '../components/hero.module.css'
-
-import renderOptions from '../components/renderOptions'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+
+import blogPostStyles from './blog-post.module.css'
+import Layout from '../components/layout'
+import heroStyles from '../components/hero.module.css'
+import renderOptions from '../components/renderOptions'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -20,8 +20,8 @@ class BlogPostTemplate extends React.Component {
         <div style={{ color: '#fff' }}>
           <Helmet>
             <html lang="ca" />
-            <title>{`${post.title} | ${siteTitle}`}</title>
-            <meta property="og:title" content={`${post.title} | ${siteTitle}`} />
+            <title>{`${post.title} • ${siteTitle}`}</title>
+            <meta property="og:title" content={`${post.title} • ${siteTitle}`} />
             <meta property="og:image" content="https://comissionocturna.org/cono-splash.png" />
             <meta property="og:type" content="article" />
           </Helmet>
@@ -34,18 +34,16 @@ class BlogPostTemplate extends React.Component {
               <p
                 style={{
                   display: 'block',
-                  color: 'rgba(255, 255, 255, 0.75)',
+                  color: 'rgba(255, 255, 255, 0.4)',
                   marginBottom: '4rem',
                 }}
               >
-                ⏰ {post.publishDate}
+                ⏱ {post.publishDate}
               </p>
             </div>
           </div>
-          <div className="wrapper">
-            <div style={{ fontSize: '18px', lineHeight: 2 }}>
-              {documentToReactComponents(post.body.json, renderOptions)}
-            </div>
+          <div className={blogPostStyles.wrapper}>
+            <div>{documentToReactComponents(post.body.json, renderOptions)}</div>
           </div>
         </div>
       </Layout>

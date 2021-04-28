@@ -32,7 +32,11 @@ class RootIndex extends React.Component {
             style={{
               background: '#000',
               display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
+              // gridTemplateColumns: 'repeat(4, 1fr)',
+              // gridTemplateColumns: 'repeat(4, minmax(20%, 1fr))',
+              gridTemplateColumns: 'repeat(4, 1fr)',
+              // gridAutoFlow: 'dense',
+              // gridTemplateRows: 'masonry',
               gap: '2rem',
               marginBottom: '10rem',
             }}

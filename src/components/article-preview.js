@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import styles from './article-preview.module.css'
 
 export default ({ article }) => (
-  <Link to={`/blog/${article.slug}`}>
+  <Link to={`/blog/${article.slug}`} className={styles.previewLink}>
     <article className={styles.preview}>
       <section className={article.heroImage ? styles.previewImage : styles.previewCircle}>
         {article.heroImage ? <Img alt={article.title} fluid={article.heroImage.fluid} /> : <span>{` `}</span>}

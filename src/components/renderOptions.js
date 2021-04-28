@@ -25,14 +25,10 @@ const renderOptions = {
   },
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
-    [BLOCKS.OL_LIST]: (node, children) => <ol className={`margin-6`}>{children}</ol>,
-    [BLOCKS.UL_LIST]: (node, children) => <ul className={`margin-6`}>{children}</ul>,
-    [BLOCKS.LIST_ITEM]: (node, children) => (
-      <li className={`margin-4`}>
-        <Text margin="1">{children}</Text>
-      </li>
-    ),
-    [BLOCKS.HR]: (node, children) => <hr className={`margin-6`} />,
+    [BLOCKS.OL_LIST]: (node, children) => <ol className={`margin-2`}>{children}</ol>,
+    [BLOCKS.UL_LIST]: (node, children) => <ul className={`margin-2`}>{children}</ul>,
+    [BLOCKS.LIST_ITEM]: (node, children) => <li>{children}</li>,
+    [BLOCKS.HR]: (node, children) => <hr className={`hairline-border margin-6`} />,
     [BLOCKS.QUOTE]: (node, children) => <blockquote className={`margin-4`}>{children}</blockquote>,
     [BLOCKS.HEADING_1]: (node, children) => <Heading1>{children}</Heading1>,
     [BLOCKS.HEADING_2]: (node, children) => <Heading2>{children}</Heading2>,

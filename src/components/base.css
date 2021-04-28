@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @media only screen and (max-width: 580px) {
   html {
     font-size: 25%;
@@ -14,14 +16,6 @@
   html {
     font-size: 100%;
   }
-}
-
-@font-face {
-  font-family: 'Avenir';
-  font-weight: 400;
-  font-style: normal;
-  src: url('/avenir-400.woff2') format('woff2');
-  font-display: swap;
 }
 
 @keyframes fade-in-to-85 {
@@ -61,13 +55,15 @@
 }
 
 body {
-  font-family: 'Avenir', Tahoma, Arial, Helvetica, sans-serif;
+  /* font-family: 'Avenir', Tahoma, Arial, Helvetica, sans-serif; */
+  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   line-height: 1.65;
   color: #373f49;
   background: #000;
   margin: 0;
   font-weight: 100;
+  text-rendering: optimizeLegibility;
 }
 
 img {
@@ -79,7 +75,9 @@ h1,
 h2,
 h3 {
   font-size: 2em;
-  font-weight: normal;
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  text-rendering: geometricPrecision;
 }
 
 a {
@@ -95,14 +93,13 @@ a {
   font-weight: 400;
 }
 
-.wrapper {
-  /* width: calc(100% - 10vmin); */
-  margin: 0 auto;
-  padding: 0 0 5vmin;
-}
-
 .fontsize-2 {
   font-size: 1.5rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 0 5vmin;
 }
 
 /**
@@ -199,6 +196,56 @@ a {
   margin-bottom: 8rem;
 }
 
+p.margin-0 {
+  margin-top: unset;
+  margin-bottom: 0rem;
+}
+
+p.margin-0-important {
+  margin-top: unset;
+  margin-bottom: 0rem !important;
+}
+
+p.margin-1 {
+  margin-top: unset;
+  margin-bottom: 1rem;
+}
+
+p.margin-2 {
+  margin-top: unset;
+  margin-bottom: 2rem;
+}
+
+p.margin-3 {
+  margin-top: unset;
+  margin-bottom: 3rem;
+}
+
+p.margin-4 {
+  margin-top: unset;
+  margin-bottom: 4rem;
+}
+
+p.margin-5 {
+  margin-top: unset;
+  margin-bottom: 5rem;
+}
+
+p.margin-6 {
+  margin-top: unset;
+  margin-bottom: 6rem;
+}
+
+p.margin-7 {
+  margin-top: unset;
+  margin-bottom: 7rem;
+}
+
+p.margin-8 {
+  margin-top: unset;
+  margin-bottom: 8rem;
+}
+
 /**
  *
  */
@@ -258,4 +305,13 @@ a {
 .html-element-wrapper iframe {
   width: 100%;
   max-width: 100%;
+}
+
+.hairline-border {
+  box-shadow: 0 0 0 0.25px rgb(67, 67, 67);
+  border-width: 0;
+}
+
+ul > li p {
+  margin: 0 !important;
 }
