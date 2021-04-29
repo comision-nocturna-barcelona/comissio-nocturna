@@ -73,11 +73,28 @@ img {
 
 h1,
 h2,
-h3 {
-  font-size: 2em;
+h3,
+.heading_1,
+.heading_2,
+.heading_3 {
   font-family: 'PT Serif', serif;
   font-weight: 400;
   text-rendering: geometricPrecision;
+  margin-bottom: 5rem;
+  color: #d0d5dc;
+}
+
+h1,
+.heading_1 {
+  font-size: 2em;
+}
+h2,
+.heading-2 {
+  font-size: 1.5em;
+}
+h3,
+.heading-3 {
+  font-size: 1.3em;
 }
 
 a {
@@ -139,7 +156,7 @@ a {
 .article-intro {
   color: #c5c5c5;
   opacity: 1;
-  animation: fade-in-slow 4s cubic-bezier(0.19, 1, 0.22, 1);
+  animation: fade-in-slow 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 /**
@@ -250,11 +267,15 @@ p.margin-8 {
  *
  */
 #container {
-  max-width: 1024px;
+  max-width: 1300px;
   margin: 20vh auto;
-  padding: 0 5vmin 0 14rem;
+  padding: 0 5vmin 0 16rem;
   opacity: 1;
-  animation: fade-in-slow 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+@media only screen and (max-height: 590px) {
+  #container {
+    margin-top: 120px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -291,15 +312,26 @@ p.margin-8 {
 #section-intro {
   margin-bottom: 20vh;
   display: block;
-  color: #a0a0a0;
+  color: #e1e1e1;
   opacity: 1;
-  animation: fade-in-slow 4s cubic-bezier(0.19, 1, 0.22, 1);
+  animation: fade-in-slow 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  hyphens: auto;
+}
+
+@media only screen and (min-width: 1300px) {
+  #section-intro {
+    padding: 0 13rem;
+  }
+}
+
+#section-intro p {
+  font-size: 1.3rem;
 }
 
 #section-body {
   display: block;
   opacity: 1;
-  animation: fade-in-slow 4s cubic-bezier(0.19, 1, 0.22, 1);
+  animation: fade-in-slow 650ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .html-element-wrapper iframe {

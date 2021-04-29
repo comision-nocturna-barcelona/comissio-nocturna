@@ -11,7 +11,11 @@ export default ({ article }) => (
         {article.heroImage ? <Img alt={article.title} fluid={article.heroImage.fluid} /> : <span>{` `}</span>}
       </section>
       <section className={styles.previewTitleSection}>
-        <h3 className={styles.previewTitle}>{article.title}</h3>
+        <div className={styles.previewTitleWrapper}>
+          <h3 className={`${styles.previewTitle} ${article.heroImage ? styles.previewTitleWithImage : ''} `}>
+            {article.title}
+          </h3>
+        </div>
       </section>
     </article>
   </Link>

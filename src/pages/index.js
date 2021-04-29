@@ -60,7 +60,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost(filter: { node_locale: { eq: "ca" } }) {
+    allContentfulBlogPost(sort: { order: DESC, fields: publishDate }, filter: { node_locale: { eq: "ca" } }) {
       edges {
         node {
           id

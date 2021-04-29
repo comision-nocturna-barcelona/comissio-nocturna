@@ -14,7 +14,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'comissiò nocturna',
+    title: 'Comissió Nocturna • Barcelona',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [

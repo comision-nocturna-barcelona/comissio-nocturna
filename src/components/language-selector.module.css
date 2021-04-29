@@ -1,9 +1,27 @@
 .language-selector {
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 2rem;
   display: flex;
   flex-direction: column;
+  top: 5vh;
+  right: 2vw;
+  z-index: 1000;
+}
+@media only screen and (max-width: 600px) {
+  .language-selector {
+    top: 12px;
+    right: 2vw;
+  }
+  .language-selector label {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
 }
 
 .control {
@@ -22,15 +40,16 @@
   font-weight: 100;
   text-transform: uppercase;
   opacity: 0.75;
-  margin-left: 0.5rem;
+  margin-left: 0.6rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .svg {
   shape-rendering: geometricPrecision;
   text-rendering: geometricPrecision;
   image-rendering: optimizeQuality;
-  width: 3rem;
+  width: 2rem;
   height: 3rem;
   display: inline;
-  opacity: 0.75;
+  opacity: 0.5;
 }

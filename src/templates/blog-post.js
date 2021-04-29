@@ -17,7 +17,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div style={{ color: '#fff' }}>
+        <div style={{ color: '#fff', animation: 'fade-in-slow 500ms cubic-bezier(0.19, 1, 0.22, 1)' }}>
           <Helmet>
             <html lang="ca" />
             <title>{`${post.title} • ${siteTitle}`}</title>
