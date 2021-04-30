@@ -148,6 +148,7 @@
 @media only screen and (max-width: 600px) {
   .previewTitle {
     font-size: 1.25em;
+    font-weight: 700;
   }
 }
 @media only screen and (min-width: 800px) {
