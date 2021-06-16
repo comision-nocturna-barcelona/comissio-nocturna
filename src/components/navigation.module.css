@@ -38,7 +38,7 @@
   object-fit: contain;
   object-position: left;
   position: absolute;
-  top: 5vmin;
+  top: 4rem;
   left: 5vmin;
   margin: 0;
 }

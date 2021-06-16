@@ -23,10 +23,10 @@
 
 /* staggered fade-in */
 .previewLink {
-  animation: fade-in-slow 1200ms;
+  animation-duration: 1200ms;
 }
 .previewLink:nth-child(1) {
-  animation: fade-in-slow 150ms;
+  animation-duration: 150ms;
 }
 .previewLink:nth-child(2) {
   animation-duration: 300ms;
@@ -35,7 +35,7 @@
   animation-duration: 450ms;
 }
 .previewLink:nth-child(4) {
-  animation: fade-in-slow 600ms;
+  animation-duration: 600ms;
 }
 .previewLink:nth-child(5) {
   animation-duration: 900ms;
@@ -44,7 +44,12 @@
   animation-duration: 750ms;
 }
 .previewLink:nth-child(12) {
-  animation: fade-in-slow 1050ms;
+  animation-duration: 1050ms;
+}
+
+/* highlighted blog post fades in slower */
+.previewHighlighted {
+  animation-name: fade-in-slow;
 }
 
 @media only screen and (max-width: 800px) {
@@ -55,15 +60,7 @@
 }
 @media only screen and (min-width: 800px) {
   /* big balls */
-  .previewLink:nth-child(1) {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-  .previewLink:nth-child(4) {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-  .previewLink:nth-child(12) {
+  .previewLink.previewHighlighted {
     grid-column: span 2;
     grid-row: span 2;
   }

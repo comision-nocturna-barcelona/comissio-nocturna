@@ -54,27 +54,28 @@ class RootIndex extends React.Component {
 export default RootIndex
 
 export const pageQuery = graphql`
-  {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allContentfulBlogPost(sort: { order: DESC, fields: publishDate }, filter: { node_locale: { eq: "ca" } }) {
-      edges {
-        node {
-          id
-          title
-          heroImage {
-            fluid(maxWidth: 448) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          node_locale
-          publishDate(fromNow: true, locale: "ca")
-          slug
-        }
-      }
-    }
-  }
-`
+         {
+           site {
+             siteMetadata {
+               title
+             }
+           }
+           allContentfulBlogPost(sort: { order: DESC, fields: publishDate }, filter: { node_locale: { eq: "ca" } }) {
+             edges {
+               node {
+                 id
+                 title
+                 heroImage {
+                   fluid(maxWidth: 448) {
+                     ...GatsbyContentfulFluid_tracedSVG
+                   }
+                 }
+                 node_locale
+                 publishDate(fromNow: true, locale: "ca")
+                 slug
+                 highlighted
+               }
+             }
+           }
+         }
+       `
