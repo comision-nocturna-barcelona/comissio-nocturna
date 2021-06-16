@@ -5,21 +5,21 @@ import Img from 'gatsby-image'
 import styles from './article-preview.module.css'
 
 export default ({ article }) => (
-  <div className={styles.preview}>
-    <Img alt="" fluid={article.heroImage.fluid} />
-    <h3 className={styles.previewTitle}>
-      <Link to={`/blog/${article.slug}`}>{article.title}</Link>
-    </h3>
-    <small>{article.publishDate}</small>
-    <p
-      dangerouslySetInnerHTML={{
-        __html: article.description.childMarkdownRemark.html,
-      }}
-    />
-    {article.tags.map(tag => (
-      <p className={styles.tag} key={tag}>
-        {tag}
-      </p>
-    ))}
-  </div>
+  <Link
+    to={`/blog/${article.slug}`}
+    className={`${styles.previewLink} ${article.highlighted ? styles.previewHighlighted : null}`}
+  >
+    <article className={styles.preview}>
+      <section className={article.heroImage ? styles.previewImage : styles.previewCircle}>
+        {article.heroImage ? <Img alt={article.title} fluid={article.heroImage.fluid} /> : <span>{` `}</span>}
+      </section>
+      <section className={styles.previewTitleSection}>
+        <div className={styles.previewTitleWrapper}>
+          <h3 className={`${styles.previewTitle} ${article.heroImage ? styles.previewTitleWithImage : ''} `}>
+            {article.title}
+          </h3>
+        </div>
+      </section>
+    </article>
+  </Link>
 )

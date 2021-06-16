@@ -1,5 +1,3 @@
 import React from 'react'
 
-export default ({ children }) => (
-  <div style={{ maxWidth: 1024, margin: '0 auto' }}>{children}</div>
-)
+export default ({ children }) => <main id="container">{children}</main>

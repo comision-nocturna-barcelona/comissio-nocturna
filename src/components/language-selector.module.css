@@ -1,0 +1,57 @@
+.language-selector {
+  position: fixed;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  top: 5vh;
+  right: 2vw;
+  z-index: 1000;
+}
+@media only screen and (max-width: 600px) {
+  .language-selector {
+    top: 12px;
+    right: 2vw;
+  }
+  .language-selector label {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+
+.control {
+  display: inline-flex;
+  align-self: flex-end;
+}
+
+.button {
+  height: 2rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  background-color: transparent;
+  color: white;
+  border: 0;
+  font-size: 1rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.svg {
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+  image-rendering: optimizeQuality;
+  width: 2rem;
+  height: 2rem;
+  display: inline;
+  opacity: 0.6;
+  margin-left: 0.5rem;
+}

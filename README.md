@@ -1,6 +1,6 @@
 # comissio-nocturna
 
-Created using Gatsby [Contentful](https://www.contentful.com) starter for creating a blog
+Created using Gatsby [Contentful](https://www.contentful.com) starter for creating a blog.
 
 ## Commands
 
@@ -22,6 +22,8 @@ Run a production build into `./public` and publish the site to GitHub pages.
 
 Removes all dependencies, scripts and data from the installation script.
 
-## For editing content head to:
+## Content
+
+### For editing content head to:
 
 https://app.contentful.com/spaces/kcnuvbnl0yoj/home
