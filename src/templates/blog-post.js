@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import blogPostStyles from './blog-post.module.css'
@@ -14,6 +14,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const image = getImage(post.heroImage.fluid)
 
     return (
       <Layout location={this.props.location}>
@@ -27,7 +28,7 @@ class BlogPostTemplate extends React.Component {
           </Helmet>
           <div className={heroStyles.hero} style={{ gridTemplateColumns: `${post.heroImage ? '1fr 1fr' : '1fr'}` }}>
             {post.heroImage && (
-              <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} objectFit="contain" />
+              <GatsbyImage className={heroStyles.heroImage} alt={post.title} fullWidth={image} objectFit="contain" />
             )}
             <div>
               <h1 className="section-headline">{post.title}</h1>

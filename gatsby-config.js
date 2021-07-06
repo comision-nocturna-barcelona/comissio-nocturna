@@ -19,9 +19,10 @@ module.exports = {
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
     'gatsby-transformer-remark',
-    'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
