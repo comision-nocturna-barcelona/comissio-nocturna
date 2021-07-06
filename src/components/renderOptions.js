@@ -33,7 +33,7 @@ const renderOptions = {
     [BLOCKS.HEADING_1]: (node, children) => <Heading1>{children}</Heading1>,
     [BLOCKS.HEADING_2]: (node, children) => <Heading2>{children}</Heading2>,
     [INLINES.HYPERLINK]: (node, children) => (
-      <a href={node.data.uri} target="_blank">
+      <a href={node.data.uri} target="_blank" rel="noopener noreferrer">
         {children}
       </a>
     ),
